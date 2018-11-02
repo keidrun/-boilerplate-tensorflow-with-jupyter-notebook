@@ -1,0 +1,14 @@
+sudo: required
+services:
+  - docker
+
+script:
+  - docker image build -t $DOCKER_USERNAME/ml-base -f Dockerfile.base .
+  - docker image build -t $DOCKER_USERNAME/ml-tensorflow -f Dockerfile.tensorflow .
+  - docker image build -t $DOCKER_USERNAME/ml-keras -f Dockerfile.keras .
+
+after_success:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker push $DOCKER_USERNAME/ml-base
+  - docker push $DOCKER_USERNAME/ml-tensorflow
+  - docker push $DOCKER_USERNAME/ml-keras

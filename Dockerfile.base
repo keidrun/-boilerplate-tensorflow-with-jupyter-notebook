@@ -1,0 +1,12 @@
+FROM continuumio/anaconda3
+
+LABEL maintainer="Keid"
+
+RUN conda update conda \
+  && conda update --all
+
+VOLUME /data/notebooks
+
+EXPOSE 8888
+
+CMD jupyter notebook --notebook-dir=/data/notebooks --ip=0.0.0.0 --port=8888 --no-browser --allow-root

@@ -1,4 +1,6 @@
-FROM continuumio/anaconda3:5.1.0
+FROM continuumio/anaconda3
+
+LABEL maintainer="Keid"
 
 RUN conda update -n base conda \
   && conda create -n tf-env python=3.6 \
