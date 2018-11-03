@@ -3,12 +3,18 @@ services:
   - docker
 
 script:
-  - docker image build -t $DOCKER_USERNAME/ml-base -f Dockerfile.base .
-  - docker image build -t $DOCKER_USERNAME/ml-tensorflow -f Dockerfile.tensorflow .
-  - docker image build -t $DOCKER_USERNAME/ml-keras -f Dockerfile.keras .
+  - docker image build -t $DOCKER_USERNAME/ml-base -f Dockerfile.ana.base .
+  - docker image build -t $DOCKER_USERNAME/ml-tensorflow -f Dockerfile.ana.tensorflow .
+  - docker image build -t $DOCKER_USERNAME/ml-keras -f Dockerfile.ana.keras .
+  - docker image build -t $DOCKER_USERNAME/ml-base-mini -f Dockerfile.mini.base .
+  - docker image build -t $DOCKER_USERNAME/ml-tensorflow-mini -f Dockerfile.mini.tensorflow .
+  - docker image build -t $DOCKER_USERNAME/ml-keras-mini -f Dockerfile.mini.keras .
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push $DOCKER_USERNAME/ml-base
   - docker push $DOCKER_USERNAME/ml-tensorflow
   - docker push $DOCKER_USERNAME/ml-keras
+  - docker push $DOCKER_USERNAME/ml-base-mini
+  - docker push $DOCKER_USERNAME/ml-tensorflow-mini
+  - docker push $DOCKER_USERNAME/ml-keras-mini

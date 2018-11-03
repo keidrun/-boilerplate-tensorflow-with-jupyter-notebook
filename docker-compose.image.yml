@@ -2,7 +2,7 @@ version: '3'
 
 services:
   notebook:
-    image: keidrun/ml-keras
+    image: keidrun/ml-keras-mini
     ports:
       - "8888:8888"
     volumes:

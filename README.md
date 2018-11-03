@@ -19,25 +19,31 @@ Boilerplate of Dockerfiles for Jupyter Notebook, Tensorflow, Keras and so on.
 
 ## Dockerfile List
 
-| Dockerfile Name           | Main Packages                                 | Virtual Env. | Base Image            |
-| ------------------------- | --------------------------------------------- | ------------ | --------------------- |
-| Dockerfile.base           | Anaconda, Jupyter Notebook                    | Not used     | continuumio/anaconda3 |
-| Dockerfile.tensorflow-env | Anaconda, Jupyter Notebook, Tensorflow        | Activated    | continuumio/anaconda3 |
-| Dockerfile.tensorflow     | Anaconda, Jupyter Notebook, Tensorflow        | Not used     | keidrun/ml-base       |
-| Dockerfile.keras          | Anaconda, Jupyter Notebook, Tensorflow, Keras | Not used     | keidrun/ml-base       |
+| Dockerfile Name            | Main Packages                                  | Virtual Env. | Base Image             |
+| -------------------------- | ---------------------------------------------- | ------------ | ---------------------- |
+| Dockerfile.tensorflow-env  | Anaconda, Jupyter Notebook, Tensorflow         | Activated    | continuumio/anaconda3  |
+| Dockerfile.ana.base        | Anaconda, Jupyter Notebook                     | Not used     | continuumio/anaconda3  |
+| Dockerfile.ana.tensorflow  | Anaconda, Jupyter Notebook, Tensorflow         | Not used     | keidrun/ml-base        |
+| Dockerfile.ana.keras       | Anaconda, Jupyter Notebook, Tensorflow, Keras  | Not used     | keidrun/ml-base        |
+| Dockerfile.mini.base       | Miniconda, Jupyter Notebook                    | Not used     | continuumio/miniconda3 |
+| Dockerfile.mini.tensorflow | Miniconda, Jupyter Notebook, Tensorflow        | Not used     | keidrun/ml-base-mini   |
+| Dockerfile.mini.keras      | Miniconda, Jupyter Notebook, Tensorflow, Keras | Not used     | keidrun/ml-base-mini   |
 
 ## Docker Image List
 
-| Docker Image Name          | Built Dockerfile Name     |
-| -------------------------- | ------------------------- |
-| keidrun/ml-base            | Dockerfile.base           |
-| keidrun/ml-tensorflow      | Dockerfile.tensorflow     |
-| keidrun/ml-keras           | Dockerfile.keras          |
+| Docker Image Name          | Built Dockerfile Name      |
+| -------------------------- | -------------------------- |
+| [keidrun/ml-base](https://hub.docker.com/r/keidrun/ml-base/)            | Dockerfile.ana.base        |
+| [keidrun/ml-tensorflow](https://hub.docker.com/r/keidrun/ml-tensorflow/)      | Dockerfile.ana.tensorflow  |
+| [keidrun/ml-keras](https://hub.docker.com/r/keidrun/ml-keras/)           | Dockerfile.ana.keras       |
+| [keidrun/ml-base-mini](https://hub.docker.com/r/keidrun/ml-base-mini/)       | Dockerfile.mini.base       |
+| [keidrun/ml-tensorflow-mini](https://hub.docker.com/r/keidrun/ml-tensorflow-mini/) | Dockerfile.mini.tensorflow |
+| [keidrun/ml-keras-mini](https://hub.docker.com/r/keidrun/ml-keras-mini/)      | Dockerfile.mini.keras      |
 
-For example, if you'd like to use `keidrun/ml-keras` image, run the following command:
+For example, if you'd like to use `keidrun/ml-keras-mini` image, run the following command:
 
 ```bash
-docker container run -it -p 8888:8888 -v $(pwd)/data/notebooks:/data/notebooks keidrun/ml-keras
+docker container run -it -p 8888:8888 -v $(pwd)/data/notebooks:/data/notebooks keidrun/ml-keras-mini
 ```
 
 Or edit `image` value in `docker-compose.image.yml` and run the following command:

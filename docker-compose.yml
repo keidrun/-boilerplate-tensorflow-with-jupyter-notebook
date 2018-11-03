@@ -4,7 +4,7 @@ services:
   notebook:
     build:
       context: .
-      dockerfile: Dockerfile.keras
+      dockerfile: Dockerfile.mini.keras
     ports:
       - "8888:8888"
     volumes:
