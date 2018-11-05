@@ -25,9 +25,11 @@ Boilerplate of Dockerfiles for Jupyter Notebook, Tensorflow, Keras and so on.
 | Dockerfile.ana.base        | Anaconda, Jupyter Notebook                     | Not used     | continuumio/anaconda3  |
 | Dockerfile.ana.tensorflow  | Anaconda, Jupyter Notebook, Tensorflow         | Not used     | keidrun/ml-base        |
 | Dockerfile.ana.keras       | Anaconda, Jupyter Notebook, Tensorflow, Keras  | Not used     | keidrun/ml-base        |
+| Dockerfile.ana.pytorch     | Anaconda, Jupyter Notebook, Pytorch            | Not used     | keidrun/ml-base        |
 | Dockerfile.mini.base       | Miniconda, Jupyter Notebook                    | Not used     | continuumio/miniconda3 |
 | Dockerfile.mini.tensorflow | Miniconda, Jupyter Notebook, Tensorflow        | Not used     | keidrun/ml-base-mini   |
 | Dockerfile.mini.keras      | Miniconda, Jupyter Notebook, Tensorflow, Keras | Not used     | keidrun/ml-base-mini   |
+| Dockerfile.mini.pytorch    | Miniconda, Jupyter Notebook, Pytorch           | Not used     | keidrun/ml-base-mini   |
 
 ## Docker Image List
 
@@ -36,9 +38,11 @@ Boilerplate of Dockerfiles for Jupyter Notebook, Tensorflow, Keras and so on.
 | [keidrun/ml-base](https://hub.docker.com/r/keidrun/ml-base/)            | Dockerfile.ana.base        |
 | [keidrun/ml-tensorflow](https://hub.docker.com/r/keidrun/ml-tensorflow/)      | Dockerfile.ana.tensorflow  |
 | [keidrun/ml-keras](https://hub.docker.com/r/keidrun/ml-keras/)           | Dockerfile.ana.keras       |
+| [keidrun/ml-pytorch](https://hub.docker.com/r/keidrun/ml-pytorch/)           | Dockerfile.ana.pytorch     |
 | [keidrun/ml-base-mini](https://hub.docker.com/r/keidrun/ml-base-mini/)       | Dockerfile.mini.base       |
 | [keidrun/ml-tensorflow-mini](https://hub.docker.com/r/keidrun/ml-tensorflow-mini/) | Dockerfile.mini.tensorflow |
 | [keidrun/ml-keras-mini](https://hub.docker.com/r/keidrun/ml-keras-mini/)      | Dockerfile.mini.keras      |
+| [keidrun/ml-pytorch-mini](https://hub.docker.com/r/keidrun/ml-pytorch-mini/)      | Dockerfile.mini.pytorch    |
 
 For example, if you'd like to use `keidrun/ml-keras-mini` image, run the following command:
 
