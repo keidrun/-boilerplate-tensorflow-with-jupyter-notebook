@@ -3,14 +3,14 @@ services:
   - docker
 
 script:
-  - docker image build -t $DOCKER_USERNAME/ml-base -f Dockerfile.ana.base .
-  - docker image build -t $DOCKER_USERNAME/ml-tensorflow -f Dockerfile.ana.tensorflow .
-  - docker image build -t $DOCKER_USERNAME/ml-keras -f Dockerfile.ana.keras .
-  - docker image build -t $DOCKER_USERNAME/ml-pytorch -f Dockerfile.ana.pytorch .
-  - docker image build -t $DOCKER_USERNAME/ml-pytorch-mini -f Dockerfile.mini.base .
-  - docker image build -t $DOCKER_USERNAME/ml-tensorflow-mini -f Dockerfile.mini.tensorflow .
-  - docker image build -t $DOCKER_USERNAME/ml-keras-mini -f Dockerfile.mini.keras .
-  - docker image build -t $DOCKER_USERNAME/ml-pytorch-mini -f Dockerfile.mini.pytorch .
+  - travis_wait 30 docker image build -t $DOCKER_USERNAME/ml-base -f Dockerfile.ana.base .
+  - travis_wait 30 docker image build -t $DOCKER_USERNAME/ml-tensorflow -f Dockerfile.ana.tensorflow .
+  - travis_wait 30 docker image build -t $DOCKER_USERNAME/ml-keras -f Dockerfile.ana.keras .
+  - travis_wait 30 docker image build -t $DOCKER_USERNAME/ml-pytorch -f Dockerfile.ana.pytorch .
+  - travis_wait 30 docker image build -t $DOCKER_USERNAME/ml-pytorch-mini -f Dockerfile.mini.base .
+  - travis_wait 30 docker image build -t $DOCKER_USERNAME/ml-tensorflow-mini -f Dockerfile.mini.tensorflow .
+  - travis_wait 30 docker image build -t $DOCKER_USERNAME/ml-keras-mini -f Dockerfile.mini.keras .
+  - travis_wait 30 docker image build -t $DOCKER_USERNAME/ml-pytorch-mini -f Dockerfile.mini.pytorch .
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
