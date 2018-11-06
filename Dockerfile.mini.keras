@@ -4,7 +4,8 @@ LABEL maintainer="Keid"
 
 RUN conda update conda \
   && conda update --all \
-  && conda install tensorflow keras
+  && conda install tensorflow keras \
+  && conda clean --all
 
 VOLUME /data/notebooks
 

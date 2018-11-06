@@ -5,7 +5,8 @@ LABEL maintainer="Keid"
 RUN conda update -n base conda \
   && conda create -n tf-env python=3.6 \
   && . activate tf-env \
-  && conda install tensorflow
+  && conda install tensorflow \
+  && conda clean --all
 
 VOLUME /data/notebooks
 

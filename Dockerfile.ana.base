@@ -3,7 +3,8 @@ FROM continuumio/anaconda3
 LABEL maintainer="Keid"
 
 RUN conda update conda \
-  && conda update --all
+  && conda update --all \
+  && conda clean --all
 
 VOLUME /data/notebooks
 
