@@ -7,7 +7,7 @@ RUN conda update conda \
   && conda install tensorflow keras \
   && conda clean --all
 
-VOLUME /data/notebooks
+VOLUME /data
 
 EXPOSE 8888
 

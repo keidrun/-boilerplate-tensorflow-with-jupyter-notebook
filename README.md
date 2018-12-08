@@ -14,8 +14,9 @@ Boilerplate of Dockerfiles for Jupyter Notebook, Tensorflow, Keras and so on.
 
 ## Default Settings
 
-- Port: 8888:8888
-- Volume: ./data/notebooks:/data/notebooks
+- Port: `8888:8888`
+- Volume: `./data:/data`
+- --notebook-dir: `/data/notebooks`
 
 ## Dockerfile List
 
@@ -47,7 +48,7 @@ Boilerplate of Dockerfiles for Jupyter Notebook, Tensorflow, Keras and so on.
 For example, if you'd like to use `keidrun/ml-keras-mini` image, run the following command:
 
 ```bash
-docker container run -it -p 8888:8888 -v $(pwd)/data/notebooks:/data/notebooks keidrun/ml-keras-mini
+docker container run -it -p 8888:8888 -v $(pwd)/data:/data keidrun/ml-keras-mini
 ```
 
 Or edit `image` value in `docker-compose.image.yml` and run the following command:

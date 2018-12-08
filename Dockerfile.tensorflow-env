@@ -8,7 +8,7 @@ RUN conda update -n base conda \
   && conda install tensorflow \
   && conda clean --all
 
-VOLUME /data/notebooks
+VOLUME /data
 
 EXPOSE 8888
 

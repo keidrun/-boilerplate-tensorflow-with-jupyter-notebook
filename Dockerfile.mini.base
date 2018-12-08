@@ -7,7 +7,7 @@ RUN conda update conda \
   && conda install jupyter matplotlib numpy numexpr scipy statsmodels scikit-learn pandas pillow \
   && conda clean --all
 
-VOLUME /data/notebooks
+VOLUME /data
 
 EXPOSE 8888
 

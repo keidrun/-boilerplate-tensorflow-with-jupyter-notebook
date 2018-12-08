@@ -7,7 +7,7 @@ RUN conda update conda \
   && conda install pytorch torchvision -c pytorch \
   && conda clean --all
 
-VOLUME /data/notebooks
+VOLUME /data
 
 EXPOSE 8888
 
