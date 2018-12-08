@@ -1,6 +1,6 @@
-# boilerplate-machine-learning-dockerfiles [![Build Status][travis-image]][travis-url] [![License: MIT][license-image]][license-url]
+# boilerplate-machine-learning-dockerfiles-for-anaconda [![Build Status][travis-image]][travis-url] [![License: MIT][license-image]][license-url]
 
-Boilerplate of Dockerfiles for Jupyter Notebook, Tensorflow, Keras and so on.
+Boilerplate of Dockerfiles for Jupyter Notebook, Tensorflow, Keras and so on with Anaconda.
 
 ## Required
 
@@ -26,11 +26,7 @@ Boilerplate of Dockerfiles for Jupyter Notebook, Tensorflow, Keras and so on.
 | Dockerfile.ana.base        | Anaconda, Jupyter Notebook                     | Not used     | continuumio/anaconda3  |
 | Dockerfile.ana.tensorflow  | Anaconda, Jupyter Notebook, Tensorflow         | Not used     | keidrun/ml-base        |
 | Dockerfile.ana.keras       | Anaconda, Jupyter Notebook, Tensorflow, Keras  | Not used     | keidrun/ml-base        |
-| Dockerfile.ana.pytorch     | Anaconda, Jupyter Notebook, Pytorch            | Not used     | keidrun/ml-base        |
-| Dockerfile.mini.base       | Miniconda, Jupyter Notebook                    | Not used     | continuumio/miniconda3 |
-| Dockerfile.mini.tensorflow | Miniconda, Jupyter Notebook, Tensorflow        | Not used     | keidrun/ml-base-mini   |
-| Dockerfile.mini.keras      | Miniconda, Jupyter Notebook, Tensorflow, Keras | Not used     | keidrun/ml-base-mini   |
-| Dockerfile.mini.pytorch    | Miniconda, Jupyter Notebook, Pytorch           | Not used     | keidrun/ml-base-mini   |
+| Dockerfile.ana.pytorch     | Anaconda, Jupyter Notebook, Pytorch            | Not used     | keidrun/ml-base        |å
 
 ## Docker Image List
 
@@ -40,15 +36,11 @@ Boilerplate of Dockerfiles for Jupyter Notebook, Tensorflow, Keras and so on.
 | [keidrun/ml-tensorflow](https://hub.docker.com/r/keidrun/ml-tensorflow/)      | Dockerfile.ana.tensorflow  |
 | [keidrun/ml-keras](https://hub.docker.com/r/keidrun/ml-keras/)           | Dockerfile.ana.keras       |
 | [keidrun/ml-pytorch](https://hub.docker.com/r/keidrun/ml-pytorch/)           | Dockerfile.ana.pytorch     |
-| [keidrun/ml-base-mini](https://hub.docker.com/r/keidrun/ml-base-mini/)       | Dockerfile.mini.base       |
-| [keidrun/ml-tensorflow-mini](https://hub.docker.com/r/keidrun/ml-tensorflow-mini/) | Dockerfile.mini.tensorflow |
-| [keidrun/ml-keras-mini](https://hub.docker.com/r/keidrun/ml-keras-mini/)      | Dockerfile.mini.keras      |
-| [keidrun/ml-pytorch-mini](https://hub.docker.com/r/keidrun/ml-pytorch-mini/)      | Dockerfile.mini.pytorch    |
 
-For example, if you'd like to use `keidrun/ml-keras-mini` image, run the following command:
+For example, if you'd like to use `keidrun/ml-keras` image, run the following command:
 
 ```bash
-docker container run -it -p 8888:8888 -v $(pwd)/data:/data keidrun/ml-keras-mini
+docker container run -it -p 8888:8888 -v $(pwd)/data:/data keidrun/ml-keras
 ```
 
 Or edit `image` value in `docker-compose.image.yml` and run the following command:
@@ -57,7 +49,7 @@ Or edit `image` value in `docker-compose.image.yml` and run the following comman
 docker-compose -f docker-compose.image.yml up
 ```
 
-[travis-url]: https://travis-ci.org/keidrun/boilerplate-machine-learning-dockerfiles
-[travis-image]: https://secure.travis-ci.org/keidrun/boilerplate-machine-learning-dockerfiles.svg?branch=master
+[travis-url]: https://travis-ci.org/keidrun/boilerplate-machine-learning-dockerfiles-for-anaconda
+[travis-image]: https://secure.travis-ci.org/keidrun/boilerplate-machine-learning-dockerfiles-for-anaconda.svg?branch=master
 [license-url]: https://opensource.org/licenses/MIT
 [license-image]: https://img.shields.io/badge/License-MIT-yellow.svg
