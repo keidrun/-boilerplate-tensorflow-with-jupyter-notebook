@@ -8,7 +8,7 @@ before_script:
 script:
   - travis_wait 50 docker image build -t $DOCKER_USERNAME/ml-base -f Dockerfile.ana.base .
   - travis_wait 50 docker image build -t $DOCKER_USERNAME/ml-tensorflow -f Dockerfile.ana.tensorflow .
-  - travis_wait 50 docker image build -t $DOCKER_USERNAME/ml-keras -f Dockerfile.ana.keras .
+  #  - travis_wait 50 docker image build -t $DOCKER_USERNAME/ml-keras -f Dockerfile.ana.keras .
   - travis_wait 50 docker image build -t $DOCKER_USERNAME/ml-pytorch -f Dockerfile.ana.pytorch .
 
 before_cache:

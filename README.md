@@ -34,8 +34,10 @@ Boilerplate of Dockerfiles for Jupyter Notebook, Tensorflow, Keras and so on wit
 | -------------------------- | -------------------------- |
 | [keidrun/ml-base](https://hub.docker.com/r/keidrun/ml-base/)            | Dockerfile.ana.base        |
 | [keidrun/ml-tensorflow](https://hub.docker.com/r/keidrun/ml-tensorflow/)      | Dockerfile.ana.tensorflow  |
-| [keidrun/ml-keras](https://hub.docker.com/r/keidrun/ml-keras/)           | Dockerfile.ana.keras       |
+| [keidrun/ml-keras](https://hub.docker.com/r/keidrun/ml-keras/)           | Dockerfile.ana.keras (outdated) |
 | [keidrun/ml-pytorch](https://hub.docker.com/r/keidrun/ml-pytorch/)           | Dockerfile.ana.pytorch     |
+
+NOTE: Tensorflow 2.0 supports Keras so use an above tensorflow image if you'd like a keras image.
 
 For example, if you'd like to use `keidrun/ml-keras` image, run the following command:
 
